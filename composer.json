@@ -8,5 +8,7 @@
             "email": "webmaster@inalto.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
