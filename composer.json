@@ -1,0 +1,12 @@
+{
+    "name": "inalto/payway",
+    "description": "BCC PayWay Payment Gateway interface",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alain Martini",
+            "email": "webmaster@inalto.com"
+        }
+    ],
+    "require": {}
+}
