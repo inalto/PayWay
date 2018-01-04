@@ -174,10 +174,6 @@ class IgfsCgMpiEnroll extends BaseIgfsCgMpi {
 		return $request;
 	}
 
-	protected function getSoapResponseName() {
-		return "ns1:EnrollResponse";
-	}
-
 	protected function parseResponseMap($response) {
 		parent::parseResponseMap($response);
 		$this->enrStatus = IgfsUtils::getValue($response, "enrStatus");
@@ -206,7 +202,7 @@ class IgfsCgMpiEnroll extends BaseIgfsCgMpi {
 		return $this->getSignature($this->kSig, // KSIGN
 				$fields); 
 	}
-	
+		
 	protected function getFileName() {
 		return __DIR__."/IgfsCgMpiEnroll.request";
 	}

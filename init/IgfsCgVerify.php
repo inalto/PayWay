@@ -90,6 +90,10 @@ class IgfsCgVerify extends BaseIgfsCgInit {
 		return $request;
 	}
 
+	protected function getSoapResponseName() {
+		return "ns1:VerifyResponse";
+	}
+
 	protected function parseResponseMap($response) {
 		parent::parseResponseMap($response);
 		// Opzionale

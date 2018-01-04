@@ -33,6 +33,7 @@
 {mandateInfo}
 {description}
 {recurrent}
+{freeText}
 {paymentReason}
 {topUpID}
 {firstTopUp}

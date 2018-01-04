@@ -34,6 +34,7 @@ class IgfsCgInit extends BaseIgfsCgInit {
 	public $mandateInfo;
 	public $description;
 	public $recurrent;
+	public $freeText;
 	public $paymentReason;
 	public $topUpID;
 	public $firstTopUp;
@@ -79,6 +80,7 @@ class IgfsCgInit extends BaseIgfsCgInit {
 		$this->mandateInfo = NULL;
 		$this->description = NULL;
 		$this->recurrent = NULL;
+		$this->freeText = NULL;
 		$this->paymentReason = NULL;
 		$this->topUpID = NULL;
 		$this->firstTopUp = NULL;
@@ -238,6 +240,11 @@ class IgfsCgInit extends BaseIgfsCgInit {
 			$request = $this->replaceRequest($request, "{recurrent}", "<recurrent><![CDATA[" . $this->recurrent . "]]></recurrent>");
 		else
 			$request = $this->replaceRequest($request, "{recurrent}", "");
+		if ($this->freeText != NULL)
+			$request = $this->replaceRequest($request, "{freeText}", "<freeText><![CDATA[" . $this->freeText . "]]></freeText>");
+		else
+			$request = $this->replaceRequest($request, "{freeText}", "");
+
 		if ($this->paymentReason != NULL)
 			$request = $this->replaceRequest($request, "{paymentReason}", "<paymentReason><![CDATA[" . $this->paymentReason . "]]></paymentReason>");
 		else
@@ -312,6 +319,9 @@ class IgfsCgInit extends BaseIgfsCgInit {
 		return $request;
 	}
 
+	protected function getSoapResponseName() {
+		return "ns1:InitResponse";
+	}
 
 	protected function parseResponseMap($response) {
 		parent::parseResponseMap($response);

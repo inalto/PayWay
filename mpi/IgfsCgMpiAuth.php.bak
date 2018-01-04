@@ -65,10 +65,6 @@ class IgfsCgMpiAuth extends BaseIgfsCgMpi {
 		return $request;
 	}
 
-	protected function getSoapResponseName() {
-		return "ns1:AuthResponse";
-	}
-
 	protected function parseResponseMap($response) {
 		parent::parseResponseMap($response);
 		$this->authStatus = IgfsUtils::getValue($response, "authStatus");
@@ -91,7 +87,7 @@ class IgfsCgMpiAuth extends BaseIgfsCgMpi {
 		return $this->getSignature($this->kSig, // KSIGN
 				$fields); 
 	}
-	
+		
 	protected function getFileName() {
 		return __DIR__."/IgfsCgMpiAuth.request";
 	}

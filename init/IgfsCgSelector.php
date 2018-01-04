@@ -133,6 +133,10 @@ class IgfsCgSelector extends BaseIgfsCgInit {
 		return $request;
 	}
 
+	protected function getSoapResponseName() {
+		return "ns1:SelectorResponse";
+	}
+
 	protected function parseResponseMap($response) {
 		parent::parseResponseMap($response);
 		$xml = $response[BaseIgfsCg::$RESPONSE];
