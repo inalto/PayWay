@@ -4,7 +4,7 @@ namespace PayWay\init;
 
 use PayWay\Exception\IgfsMissingParException;
 use PayWay\IgfsUtils;
-use PayWay\Level3Info;
+use PayWay\Level3Info\Level3Info;
 
 class IgfsCgVerify extends BaseIgfsCgInit {
 
