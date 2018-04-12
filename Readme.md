@@ -27,7 +27,7 @@ use PayWay\init\IgfsCgInit;
  $init->trType="AUTH";
  $init->currencyCode="EUR";
  $init->amount=4400; //Amount without comma, 1,00EUR will be 100
- $init->landID="IT"; //Language iso code
+ $init->langID="IT"; //Language iso code
  $init->notifyURL="https://myserver.it/my-thankyou-page.php";
  $init->errorURL="https://myserver.it/my-error-page.php";
 
